@@ -13,8 +13,10 @@ App built using Next.js that allows you to receive user input/feedback, analyze 
 - [Acknowledgments](#about-the-project)
 - [About the Project](#about-the-project)
   - [Built With](#tech-stack)
+  - [Server Actions](#sever-actions)
 - [Getting Started](#getting-started)
-- [Running Tests](#running-tests-locally)
+- [Running Unit Tests](#running-tests-locally)
+- [Running e2e Automation Tests](#running-tests-e2e)
 - [Deployment](#deployment)
 
 ## <a name="devops"></a>Devops/Continuous Integration
@@ -42,6 +44,12 @@ For this projects, unit/component tests and e2e tests have been set up to run in
     <li><a href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library (component testing)</a></li>
     <li><a href="https://tailwindcss.com/">Tailwind</a></li>
   </ul>
+
+### <a name="server-actions"></a>Server Actions
+
+The form for submitting the user input/feedback takes advantage of Next.js Server Actions.
+
+Server Components in React allow functions to execute on the server, reducing the client side load. Next.js leverages this feature through Server Actions, which connect forms directly to server-side functions. This eliminates the need for client-side state management typically associated with forms, like using useState. The server action connected to the form in this project can be found in the `app/actions` direectory of this repository. By using a server action, data handling is drastically simplified. For more information, see <https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations>.
 
 ## <a name="getting-started"></a>Getting Started
 
@@ -82,7 +90,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## <a name="running-tests-locally"></a>Running Tests Locally
+## <a name="running-tests-locally"></a>Running Unit Tests
 
 For writing and running unit tests for application logic, this project is set up to use [Jest](https://jestjs.io/). For writing and running component tests for React components, this project is set up to use [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 
@@ -99,6 +107,26 @@ To generate a test coverage report, run the following command:
 ```
 npm run coverage
 ```
+
+Note that these tests are also set up to run automatically in a CI environment when code is pushed to the main branch.
+
+## <a name="running-tests-e2e"></a>Running e2e Automation Tests
+
+For writing and running e2e automation tests, this project is set up to use [Playwright](https://playwright.dev/). You can find these tests in the `tests` directory of this repository.
+
+To run e2e tests, run the following command in the root directory.
+
+```bash
+npm run test:e2e
+```
+
+To run e2e tests in UI mode, run the following command in the root directory.
+
+```bash
+npm run test:e2e:ui
+```
+
+Note that these tests are also set up to run automatically in a CI environment when code is pushed to the main branch.
 
 ## <a name="deployment"></a>Deployment
 
