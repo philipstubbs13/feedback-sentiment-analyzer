@@ -13,7 +13,7 @@ App built using Next.js that allows you to receive user input/feedback, analyze 
 - [Acknowledgments](#about-the-project)
 - [About the Project](#about-the-project)
   - [Built With](#tech-stack)
-  - [Server Actions](#sever-actions)
+  - [Server Actions](#server-actions)
 - [Getting Started](#getting-started)
 - [Running Unit Tests](#running-tests-locally)
 - [Running e2e Automation Tests](#running-tests-e2e)
