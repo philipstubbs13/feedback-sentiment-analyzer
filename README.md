@@ -9,6 +9,7 @@ App built using Next.js that allows you to receive user input/feedback, analyze 
 # Table of Contents
 
 - [DevOps/Continous Integration](#devops)
+- [Screenshots](#screenshots)
 - [Acknowledgments](#about-the-project)
 - [About the Project](#about-the-project)
   - [Built With](#tech-stack)
@@ -19,6 +20,10 @@ App built using Next.js that allows you to receive user input/feedback, analyze 
 ## <a name="devops"></a>Devops/Continuous Integration
 
 For this projects, unit/component tests and e2e tests have been set up to run in a Continuous Integration (CI) environment using GitHub actions. These actions are in the `.github/actions` directory of this repository. This means that when code is pushed to the main branch, 2 GitHub actions will be kicked off. One action is to run the Jest tests in CI. The other action is to run the Playwright (e2e) tests in CI. If either of those fail, you will receive an email notification regarding the failed tests.
+
+## <a name="screenshots"></a>Screenshots
+
+<img src="./screenshots/screenshot1.png" width="600px" height="600px"/>
 
 ## <a name="acknowledgments"></a>Acknowledgments
 
@@ -83,7 +88,7 @@ For writing and running unit tests for application logic, this project is set up
 
 For more information on testing in a Next.js application, see <https://nextjs.org/docs/app/building-your-application/testing>
 
-To run both unit tests and component tests within this project, run the following command in the root directory of this project.
+To run both unit tests and component tests within this project, run the following command in the root directory.
 
 ```bash
   npm run test
@@ -95,7 +100,7 @@ To generate a test coverage report, run the following command:
 npm run coverage
 ```
 
-### <a name="deployment"></a>Deployment
+## <a name="deployment"></a>Deployment
 
 This app is deployed through the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 Deploys are set up to happen automatically when code is merged into the `main` branch.
