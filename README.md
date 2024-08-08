@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Feedback Sentiment Analyzer</h1>
+</div>
 
 Deployed Project Link: [https://feedback-sentiment-analyzer.vercel.app/](https://feedback-sentiment-analyzer.vercel.app/)
 
