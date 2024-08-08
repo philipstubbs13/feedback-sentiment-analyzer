@@ -41,7 +41,9 @@ async function submitFeedbackForm(
     const keywordsResponse = await fetch(
       "https://8bk8vzds9b.execute-api.us-east-1.amazonaws.com/prod/keywords"
     );
-    const keywordsData = (await keywordsResponse.json()) as IKeyword[];
+    const keywordsData = (await keywordsResponse.json()) as
+      | IKeyword[]
+      | undefined;
     const sentimentScore = analyzeSentiment(feedback, keywordsData);
 
     return {
